@@ -1,6 +1,6 @@
 # Composer Preview 👁️ 
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/glowingblue/composer-preview.svg)](https://packagist.org/packages/glowingblue/composer-preview)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/glowingblue/composer-preview.svg)](https://packagist.org/packages/glowingblue/composer-preview) [![Downloads](https://img.shields.io/packagist/dt/glowingblue/composer-preview.svg)](https://packagist.org/packages/glowingblue/composer-preview)
 
 A [Flarum](http://flarum.org) extension. Preview the content of a new discussion while creating in the composer.
 
