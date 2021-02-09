@@ -1,23 +1,32 @@
-# Preview Discussion
+# Composer Preview 👁️ 
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/simonxeko/preview-discussion.svg)](https://packagist.org/packages/simonxeko/preview-discussion)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/glowingblue/composer-preview.svg)](https://packagist.org/packages/glowingblue/composer-preview)
 
-A [Flarum](http://flarum.org) extension. Preview the final output when editing a new discussion
+A [Flarum](http://flarum.org) extension. Preview the content of a new discussion while creating in the composer.
+
+Originally this extension has been created by @simonxeko (see [discussion](https://discuss.flarum.org/d/22636-preview-discussion-post-wip)). Glowing Blue has taken the original idea and created a new implementation that works with the latest version of Flarum and is more seamlessly integrated into the existing `flarum/core` code.
+
+![screenshot](https://user-images.githubusercontent.com/36635329/107345571-ffefba80-6ac3-11eb-9a22-03d313877630.png)
 
 ### Installation
 
-Use [Bazaar](https://discuss.flarum.org/d/5151-flagrow-bazaar-the-extension-marketplace) or install manually with composer:
-
 ```sh
-composer require simonxeko/preview-discussion
+composer require glowingblue/composer-preview
 ```
 
 ### Updating
 
 ```sh
-composer update simonxeko/preview-discussion
+composer update glowingblue/composer-preview
 ```
 
 ### Links
 
-- [Packagist](https://packagist.org/packages/simonxeko/preview-discussion)
+- [Packagist](https://packagist.org/packages/glowingblue/composer-preview)
+- [Github](https://github.com/glowingblue/flarum-ext-composer-preview)
+- [Discuss](https://discuss.flarum.org/d/26172-composer-preview)
+- [Website](https://glowingblue.com)
+
+This package is sponsored and maintained by @glowingblue
+
+(FYI: this discussion has been created before the package has been published on Packagist. It will be updated once the release is done later today)

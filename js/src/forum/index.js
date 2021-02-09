@@ -1,7 +1,7 @@
 /*
- * This file is part of simonxeko/preview-discussion.
+ * This file is part of glowingblue/composer-preview.
  *
- * Copyright (c) 2021 simonxeko & iPurpl3x.
+ * Copyright (c) 2021 Rafael Horvat.
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
@@ -14,7 +14,7 @@ import ComposerBody from 'flarum/components/ComposerBody';
 import DiscussionComposer from 'flarum/components/DiscussionComposer';
 import TextEditor from 'flarum/components/TextEditor';
 
-app.initializers.add('simonxeko/preview-discussion', () => {
+app.initializers.add('glowingblue-composer-preview', () => {
 	// For the `DiscussionComposer` add a property to the `ComposerState` used to
 	// check if the preview is being whown or not. The will be accessible globally by
 	// accessing `app.composer.showPreview`.

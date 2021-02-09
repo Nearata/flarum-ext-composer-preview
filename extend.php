@@ -1,15 +1,15 @@
 <?php
 
 /*
- * This file is part of simonxeko/preview-discussion.
+ * This file is part of glowingblue/composer-preview.
  *
- * Copyright (c) 2021 simonxeko & iPurpl3x.
+ * Copyright (c) 2021 Rafael Horvat.
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-namespace Simonxeko\PreviewDicussion;
+namespace GlowingBlue\ComposerPreview;
 
 use Flarum\Extend;
 

@@ -1,16 +1,18 @@
 {
-  "name": "simonxeko/preview-discussion",
-  "description": "Preview the final output when editing a new discussion",
+  "name": "glowingblue/composer-preview",
+  "description": "Preview the content of a new discussion while creating it in the composer",
   "keywords": [
     "flarum"
   ],
   "type": "flarum-extension",
   "license": "MIT",
   "support": {
-    "issues": "hhttps://github.com/simonxeko/flarum-ext-preview-discussion",
-    "source": "https://github.com/simonxeko/flarum-ext-preview-discussion/issues",
-    "forum": "https://discuss.flarum.org/d/22636-preview-discussion-post-wip"
+    "issues": "https://github.com/glowingblue/flarum-ext-composer-preview",
+    "source": "https://github.com/glowingblue/flarum-ext-composer-preview/issues",
+    "forum": "https://discuss.flarum.org/d/26172-composer-preview",
+    "email": "dev@glowingblue.com"
   },
+  "homepage": "https://glowingblue.com",
   "require": {
     "flarum/core": "^0.1.0-beta.15"
   },
@@ -23,25 +25,30 @@
       "name": "Rafael Horvat",
       "email": "rafael.horvat@icloud.com",
       "role": "Developer"
+    },
+    {
+      "name": "GlowingBlue",
+      "email": "dev@glowingblue.com",
+      "role": "Maintainer"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Simonxeko\\PreviewDicussion\\": "src/"
+      "GlowingBlue\\ComposerPreview\\": "src/"
     }
   },
   "extra": {
     "flarum-extension": {
-      "title": "Preview Discussion",
+      "title": "GB Composer Preview",
       "category": "feature",
       "icon": {
         "name": "fas fa-eye",
-        "backgroundColor": "",
-        "color": ""
+        "backgroundColor": "#00a7e3",
+        "color": "#fff"
       }
     },
     "flagrow": {
-      "discuss": "https://discuss.flarum.org/d/22636-preview-discussion-post-wip"
+      "discuss": "https://discuss.flarum.org/d/26172-composer-preview"
     }
   }
 }
