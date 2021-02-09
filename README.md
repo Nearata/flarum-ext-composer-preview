@@ -23,10 +23,5 @@ composer update glowingblue/composer-preview
 ### Links
 
 - [Packagist](https://packagist.org/packages/glowingblue/composer-preview)
-- [Github](https://github.com/glowingblue/flarum-ext-composer-preview)
 - [Discuss](https://discuss.flarum.org/d/26172-composer-preview)
 - [Website](https://glowingblue.com)
-
-This package is sponsored and maintained by @glowingblue
-
-(FYI: this discussion has been created before the package has been published on Packagist. It will be updated once the release is done later today)
