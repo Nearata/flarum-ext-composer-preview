@@ -8,19 +8,19 @@ Originally this extension has been created by @simonxeko (see [discussion](https
 
 ![screenshot](https://user-images.githubusercontent.com/36635329/107345571-ffefba80-6ac3-11eb-9a22-03d313877630.png)
 
-### Installation
+### 📥 Installation
 
 ```sh
 composer require glowingblue/composer-preview
 ```
 
-### Updating
+### ♻ Updating
 
 ```sh
 composer update glowingblue/composer-preview
 ```
 
-### Links
+### 🔗 Links
 
 - [Packagist](https://packagist.org/packages/glowingblue/composer-preview)
 - [Discuss](https://discuss.flarum.org/d/26172-composer-preview)
