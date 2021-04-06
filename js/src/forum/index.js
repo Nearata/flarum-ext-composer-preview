@@ -39,7 +39,12 @@ app.initializers.add('glowingblue-composer-preview', () => {
 	// Add a `jumpToPreview` method to the `DiscussionComposer`. Doing that implies
 	// that the button for preview will be shown in the `controlItems` of the `TextEditor`.
 	// Thiw method will be the callback called when this button is clicked.
-	DiscussionComposer.prototype.jumpToPreview = function () {
+	DiscussionComposer.prototype.jumpToPreview = function (e) {
+		// Prevent fof/upload to trigger the preview:
+		if (!(e instanceof MouseEvent)) {
+			return;
+		}
+
 		// Update the state
 		this.composer.showPreview = !this.composer.showPreview;
 
