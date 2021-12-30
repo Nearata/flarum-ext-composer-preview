@@ -1,5 +1,5 @@
 /*
- * This file is part of glowingblue/composer-preview.
+ * This file is part of zerosonesfun/composer-preview.
  *
  * Copyright (c) 2021 Rafael Horvat.
  *
@@ -14,7 +14,7 @@ import ComposerBody from 'flarum/components/ComposerBody';
 import DiscussionComposer from 'flarum/components/DiscussionComposer';
 import TextEditor from 'flarum/components/TextEditor';
 
-app.initializers.add('glowingblue-composer-preview', () => {
+app.initializers.add('zerosonesfun-composer-preview', () => {
 	// For the `DiscussionComposer` add a property to the `ComposerState` used to
 	// check if the preview is being whown or not. The will be accessible globally by
 	// accessing `app.composer.showPreview`.

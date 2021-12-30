@@ -1,5 +1,5 @@
 {
-  "name": "glowingblue/composer-preview",
+  "name": "zerosonesfun/composer-preview",
   "description": "Preview the content of a new discussion while creating it in the composer.",
   "keywords": [
     "flarum"
@@ -9,10 +9,10 @@
   "support": {
     "issues": "https://github.com/zerosonesfun/flarum-ext-composer-preview",
     "source": "https://github.com/zerosonesfun/flarum-ext-composer-preview/issues",
-    "forum": "https://discuss.flarum.org/d/26172-composer-preview",
-    "email": "dev@glowingblue.com"
+    "forum": "https://discuss.flarum.org/d/29761-composer-preview",
+    "email": "billy@wilcosky.com"
   },
-  "homepage": "https://glowingblue.com",
+  "homepage": "https://www.wilcosky.com",
   "require": {
     "flarum/core": "^1.0"
   },
@@ -34,7 +34,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "GlowingBlue\\ComposerPreview\\": "src/"
+      "ZerosOnesFun\\ComposerPreview\\": "src/"
     }
   },
   "extra": {

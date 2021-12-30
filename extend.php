@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of glowingblue/composer-preview.
+ * This file is part of zerosonesfun/composer-preview.
  *
  * Copyright (c) 2021 Rafael Horvat.
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace GlowingBlue\ComposerPreview;
+namespace ZerosOnesFun\ComposerPreview;
 
 use Flarum\Extend;
 
