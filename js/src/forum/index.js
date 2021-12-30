@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-import app from 'flarum/app';
-import { extend } from 'flarum/extend';
-import ComposerState from 'flarum/states/ComposerState';
-import ComposerBody from 'flarum/components/ComposerBody';
-import DiscussionComposer from 'flarum/components/DiscussionComposer';
-import TextEditor from 'flarum/components/TextEditor';
+import app from 'flarum/forum/app';
+import { extend } from 'flarum/common/extend';
+import ComposerState from 'flarum/forum/states/ComposerState';
+import ComposerBody from 'flarum/forum/components/ComposerBody';
+import DiscussionComposer from 'flarum/forum/components/DiscussionComposer';
+import TextEditor from 'flarum/common/components/TextEditor';
 
 app.initializers.add('zerosonesfun-composer-preview', () => {
 	// For the `DiscussionComposer` add a property to the `ComposerState` used to
@@ -57,28 +57,6 @@ app.initializers.add('zerosonesfun-composer-preview', () => {
 			);
 		}
 	};
-
-	extend(TextEditor.prototype, 'view', function (vdom) {
-		// When showing the preview we need to alter the UI:
-		if (app.composer.showPreview) {
-			// Hide the textarea
-			try {
-				if (vdom.children[0].tag === 'textarea') {
-					vdom.children[0].attrs.className += ' hidden';
-				}
-			} catch {}
-
-			// Make the preview button look active
-			try {
-				const itemPreview = vdom.children[1].children[0].children.find(
-					(item) => item.attrs.className === 'item-preview'
-				);
-				if (itemPreview) {
-					itemPreview.children[0].attrs.className += ' active';
-				}
-			} catch {}
-		}
-	});
 
 	// To make that the preview container has the right size and position (including when the composer
 	// is resized) we need to continually update it.
