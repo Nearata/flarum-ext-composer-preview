@@ -1,20 +1,20 @@
 {
   "name": "glowingblue/composer-preview",
-  "description": "Preview the content of a new discussion while creating it in the composer",
+  "description": "Preview the content of a new discussion while creating it in the composer.",
   "keywords": [
     "flarum"
   ],
   "type": "flarum-extension",
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/glowingblue/flarum-ext-composer-preview",
-    "source": "https://github.com/glowingblue/flarum-ext-composer-preview/issues",
+    "issues": "https://github.com/zerosonesfun/flarum-ext-composer-preview",
+    "source": "https://github.com/zerosonesfun/flarum-ext-composer-preview/issues",
     "forum": "https://discuss.flarum.org/d/26172-composer-preview",
     "email": "dev@glowingblue.com"
   },
   "homepage": "https://glowingblue.com",
   "require": {
-    "flarum/core": "^0.1.0-beta.15"
+    "flarum/core": "^1.0"
   },
   "authors": [
     {
@@ -27,8 +27,8 @@
       "role": "Developer"
     },
     {
-      "name": "GlowingBlue",
-      "email": "dev@glowingblue.com",
+      "name": "Billy Wilcosky",
+      "email": "billy@wilcosky.com",
       "role": "Maintainer"
     }
   ],
@@ -39,16 +39,13 @@
   },
   "extra": {
     "flarum-extension": {
-      "title": "GB Composer Preview",
+      "title": "Composer Preview",
       "category": "feature",
       "icon": {
         "name": "fas fa-eye",
-        "backgroundColor": "#00a7e3",
-        "color": "#fff"
+        "backgroundColor": "#ddd",
+        "color": "#000"
       }
-    },
-    "flagrow": {
-      "discuss": "https://discuss.flarum.org/d/26172-composer-preview"
     }
   }
 }

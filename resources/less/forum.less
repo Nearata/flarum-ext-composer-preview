@@ -3,9 +3,9 @@
 		&.hidden {
 			display: none;
 		}
-		position: absolute; // size and position will be set by a jQuery function
-
-		z-index: 99; // Required to be able to scroll
+		position: absolute;
+		z-index: 99;
+		background-color: @body-bg;
 	}
 }
 
@@ -14,4 +14,11 @@
 		opacity: 0;
 		visibility: hidden;
 	}
+}
+
+@media (prefers-color-scheme: dark) {
+.Composer {
+	background-color: @body-bg;
+	color: @text-color;
+}
 }
