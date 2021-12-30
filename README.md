@@ -21,5 +21,5 @@ composer update zerosonesfun/composer-preview
 ### 🔗 Links
 
 - [Packagist](https://packagist.org/packages/zerosonesfun/composer-preview)
-- [Discuss](https://discuss.flarum.org/d/26172-composer-preview)
+- [Discuss](https://discuss.flarum.org/d/29761-composer-preview)
 - [Website](https://www.wilcosky.com)
