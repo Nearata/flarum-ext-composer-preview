@@ -2,42 +2,53 @@
 	.Composer-preview {
 		&.hidden {
 			display: none;
-		}
+	   }
 		position: absolute;
 		z-index: 99;
 		background-color: @body-bg;
-	}
+   }
 }
-
 .TextEditor {
 	textarea.hidden {
 		opacity: 0;
 		visibility: hidden;
-	}
+   }
 }
-
 @media (prefers-color-scheme: dark) {
+	.Composer {
+		background-color: @body-bg;
+		color: @text-color;
+   }
+}
 .Composer {
 	background-color: @body-bg;
-	color: @text-color;
 }
-}
-
-.Composer {
-	background-color: @body-bg;
-}
-
 .item-preview-discussion {
 	padding: 0 !important;
 }
-
 @media (max-width: 767px) {
-.ComposerBody-header .item-title h3 {
-position: relative;
-z-index: 1000;
-text-align: center;
-}}
-
+	.ComposerBody-header .item-title h3 {
+		position: relative;
+		z-index: 1000;
+		text-align: center;
+   }
+}
 .minimized .ComposerBody-content {
-padding-left: 5px;
+	padding-left: 5px;
+}
+.ComposerBody-header .item-title h3 {
+	width: 400px;
+	margin: 0 auto;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@media (min-width: 768px) {
+	.ComposerBody-header .item-title h3 {
+		width: 520px;
+		margin: 0 auto;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+   }
 }
