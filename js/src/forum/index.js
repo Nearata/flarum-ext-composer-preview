@@ -12,7 +12,6 @@ import { extend } from 'flarum/common/extend';
 import ComposerState from 'flarum/forum/states/ComposerState';
 import ComposerBody from 'flarum/forum/components/ComposerBody';
 import DiscussionComposer from 'flarum/forum/components/DiscussionComposer';
-import TextEditor from 'flarum/common/components/TextEditor';
 
 app.initializers.add('zerosonesfun-composer-preview', () => {
 	// For the `DiscussionComposer` add a property to the `ComposerState` used to
