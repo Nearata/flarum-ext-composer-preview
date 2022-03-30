@@ -4,13 +4,12 @@
 			display: none;
 	   }
 		position: absolute;
-		z-index: 99;
+		z-index: 1020;
 		background-color: @body-bg;
    }
 }
 .TextEditor {
 	textarea.hidden {
-		opacity: 0;
 		visibility: hidden;
    }
 }
@@ -20,59 +19,25 @@
 		color: @text-color;
    }
 }
+@media (max-width: 767px) {
+	.visible.Composer:not(.minimized)::before {
+		opacity: 0;
+   }
+	.visible.Composer:not(.minimized) .item-title {
+		text-align: center;
+   }
+	.item-preview-discussion {
+		padding: 0 0 2px 0 !important;
+   }
+}
 .Composer {
 	background-color: @body-bg;
 }
-.item-preview-discussion {
-	padding: 0 !important;
-}
-@media (max-width: 767px) {
-	.ComposerBody-header .item-title h3 {
-		position: relative;
-		z-index: 1000;
-		text-align: center;
-   }
-}
-.minimized .ComposerBody-content {
-	padding-left: 5px;
-}
-.ComposerBody-header .item-title h3 {
-	width: 430px;
-	margin: 0 auto;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-@media (min-width: 768px) {
-	.ComposerBody-header .item-title h3 {
-		width: 520px;
-   }
-}
-@media (max-width: 500px) {
-	.ComposerBody-header .item-title h3 {
-		width: 330px;
-   }
-}
-@media (max-width: 380px) {
-	.ComposerBody-header .item-title h3 {
-		width: 200px;
-   }
-}
-
 .Composer-preview.Post-body::after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f06e";
-    position: absolute;
-    bottom: 0;
-    font-size: 30px;
-    opacity: 0.4;
+	font-family: "Font Awesome 5 Free";
+	content: "\f06e";
+	position: absolute;
+	bottom: 0;
+	font-size: 30px;
+	opacity: 0.4;
 }
-
-.ComposerBody-header h3 {
-margin: inherit;
-}
-@media @phone {
-.ComposerBody-header h3 input {
-width: 90% !important;
-overflow: hidden;
-}}
