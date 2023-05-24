@@ -18,9 +18,7 @@ app.initializers.add('zerosonesfun-composer-preview', () => {
 	// check if the preview is being whown or not. The will be accessible globally by
 	// accessing `app.composer.showPreview`.
 	extend(ComposerState.prototype, 'load', function (_, componentClass) {
-		if (componentClass === DiscussionComposer) {
-			this.showPreview = false;
-		}
+    this.showPreview = false;
 	});
 
 	// Add an empty element to the `ComposerBody.headerItems`. This will be filled with content
@@ -60,7 +58,7 @@ app.initializers.add('zerosonesfun-composer-preview', () => {
 	// To make that the preview container has the right size and position (including when the composer
 	// is resized) we need to continually update it.
 	extend(ComposerBody.prototype, 'oncreate', function () {
-		setInterval(function () {
+		this.composerPreviewInterval = setInterval(function () {
 			if (app.composer.showPreview) {
 				const $textarea = this.$('.TextEditor textarea');
 				if ($textarea.offset()) {
@@ -74,4 +72,8 @@ app.initializers.add('zerosonesfun-composer-preview', () => {
 			}
 		}, 100);
 	});
+
+  extend(ComposerBody.prototype, 'onremove', function () {
+    clearInterval(this.composerPreviewInterval)
+  })
 });
