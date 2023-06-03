@@ -14,7 +14,7 @@
   },
   "homepage": "https://www.wilcosky.com",
   "require": {
-    "flarum/core": "^1.0"
+    "flarum/core": "^1.7"
   },
   "authors": [
     {
