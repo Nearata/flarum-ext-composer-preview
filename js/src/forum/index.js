@@ -24,6 +24,10 @@ app.initializers.add('zerosonesfun-composer-preview', () => {
 	// Add an empty element to the `ComposerBody.headerItems`. This will be filled with content
 	// once the preview is shown.
 	extend(ComposerBody.prototype, 'headerItems', function (items) {
+		if (app.current.get('stream')?.discussion) {
+			return
+		}
+
 		items.add(
 			'preview-discussion',
 			<div
