@@ -24,6 +24,9 @@ app.initializers.add('zerosonesfun-composer-preview', () => {
 	// Add an empty element to the `ComposerBody.headerItems`. This will be filled with content
 	// once the preview is shown.
 	extend(ComposerBody.prototype, 'headerItems', function (items) {
+		/**
+		 * @fix https://discuss.flarum.org/d/29761-composer-preview/48
+		 */
 		if (app.current.get('stream')?.discussion) {
 			return
 		}
