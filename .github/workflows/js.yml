@@ -5,3 +5,5 @@ jobs:
     uses: flarum/framework/.github/workflows/REUSABLE_frontend.yml@main
     with:
       js_package_manager: npm
+    permissions:
+      contents: 'write'
