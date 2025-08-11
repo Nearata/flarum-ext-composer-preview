@@ -11,4 +11,3 @@ tests/.phpunit.result.cache
 .vscode
 js/coverage-ts
 js/node_modules/*
-js/dist/*
