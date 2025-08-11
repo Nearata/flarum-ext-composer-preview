@@ -1,51 +1,51 @@
 {
-  "name": "zerosonesfun/composer-preview",
-  "description": "Preview the content of a new discussion while creating it in the composer.",
-  "keywords": [
-    "flarum"
-  ],
-  "type": "flarum-extension",
-  "license": "MIT",
-  "support": {
-    "issues": "https://github.com/zerosonesfun/flarum-ext-composer-preview",
-    "source": "https://github.com/zerosonesfun/flarum-ext-composer-preview/issues",
-    "forum": "https://discuss.flarum.org/d/29761-composer-preview",
-    "email": "billy@wilcosky.com"
-  },
-  "homepage": "https://www.wilcosky.com",
-  "require": {
-    "flarum/core": "^1.7"
-  },
-  "authors": [
-    {
-      "name": "simonxeko",
-      "role": "Developer"
+    "name": "nearata/flarum-ext-composer-preview",
+    "description": "Preview the content of a new discussion while creating it in the composer.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "source": "https://github.com/Nearata/flarum-ext-composer-preview"
     },
-    {
-      "name": "Rafael Horvat",
-      "email": "rafael.horvat@icloud.com",
-      "role": "Developer"
+    "require": {
+        "flarum/core": "^1.8.0"
     },
-    {
-      "name": "Billy Wilcosky",
-      "email": "billy@wilcosky.com",
-      "role": "Maintainer"
+    "authors": [
+        {
+            "name": "simonxeko",
+            "role": "Developer"
+        },
+        {
+            "name": "Rafael Horvat",
+            "email": "rafael.horvat@icloud.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Billy Wilcosky",
+            "email": "billy@wilcosky.com",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Nearata",
+            "homepage": "https://nearata.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nearata\\ComposerPreview\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Composer Preview",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-eye",
+                "backgroundColor": "#ddd",
+                "color": "#000"
+            }
+        }
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "ZerosOnesFun\\ComposerPreview\\": "src/"
-    }
-  },
-  "extra": {
-    "flarum-extension": {
-      "title": "Composer Preview",
-      "category": "feature",
-      "icon": {
-        "name": "fas fa-eye",
-        "backgroundColor": "#ddd",
-        "color": "#000"
-      }
-    }
-  }
 }

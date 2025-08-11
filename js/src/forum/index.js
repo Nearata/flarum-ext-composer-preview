@@ -1,42 +1,33 @@
-/*
- * This file is part of zerosonesfun/composer-preview.
- *
- * Copyright (c) 2021 Rafael Horvat.
- *
- * For the full copyright and license information, please view the LICENSE.md
- * file that was distributed with this source code.
- */
+import app from "flarum/forum/app";
+import { extend } from "flarum/common/extend";
+import ComposerState from "flarum/forum/states/ComposerState";
+import ComposerBody from "flarum/forum/components/ComposerBody";
+import DiscussionComposer from "flarum/forum/components/DiscussionComposer";
 
-import app from 'flarum/forum/app';
-import { extend } from 'flarum/common/extend';
-import ComposerState from 'flarum/forum/states/ComposerState';
-import ComposerBody from 'flarum/forum/components/ComposerBody';
-import DiscussionComposer from 'flarum/forum/components/DiscussionComposer';
-
-app.initializers.add('zerosonesfun-composer-preview', () => {
+app.initializers.add("nearata-composer-preview", () => {
 	// For the `DiscussionComposer` add a property to the `ComposerState` used to
 	// check if the preview is being whown or not. The will be accessible globally by
 	// accessing `app.composer.showPreview`.
-	extend(ComposerState.prototype, 'load', function (_, componentClass) {
-    this.showPreview = false;
+	extend(ComposerState.prototype, "load", function (_, componentClass) {
+		this.showPreview = false;
 	});
 
 	// Add an empty element to the `ComposerBody.headerItems`. This will be filled with content
 	// once the preview is shown.
-	extend(ComposerBody.prototype, 'headerItems', function (items) {
+	extend(ComposerBody.prototype, "headerItems", function (items) {
 		/**
 		 * @fix https://discuss.flarum.org/d/29761-composer-preview/48
 		 */
-		if (app.current.get('stream')?.discussion) {
-			return
+		if (app.current.get("stream")?.discussion) {
+			return;
 		}
 
 		items.add(
-			'preview-discussion',
+			"preview-discussion",
 			<div
-				className={`Composer-preview Post-body ${app.composer.showPreview ? '' : 'hidden'}`}
+				className={`Composer-preview Post-body ${app.composer.showPreview ? "" : "hidden"}`}
 			></div>,
-			50
+			50,
 		);
 	});
 
@@ -57,30 +48,30 @@ app.initializers.add('zerosonesfun-composer-preview', () => {
 			// ... Set the content of the dedicated element using the `s9e.TextFormatter`
 			s9e.TextFormatter.preview(
 				this.composer.fields.content(),
-				this.$('.Composer-preview')[0]
+				this.$(".Composer-preview")[0],
 			);
 		}
 	};
 
 	// To make that the preview container has the right size and position (including when the composer
 	// is resized) we need to continually update it.
-	extend(ComposerBody.prototype, 'oncreate', function () {
+	extend(ComposerBody.prototype, "oncreate", function () {
 		this.composerPreviewInterval = setInterval(function () {
 			if (app.composer.showPreview) {
-				const $textarea = this.$('.TextEditor textarea');
+				const $textarea = this.$(".TextEditor textarea");
 				if ($textarea.offset()) {
-					this.$('.Composer-preview').css({
+					this.$(".Composer-preview").css({
 						width: $textarea.width(),
 						height: $textarea.height() + 10,
-						top: $textarea.offset().top - $('.Composer').offset().top,
-						left: $textarea.offset().left - $('.Composer').offset().left,
+						top: $textarea.offset().top - $(".Composer").offset().top,
+						left: $textarea.offset().left - $(".Composer").offset().left,
 					});
 				}
 			}
 		}, 100);
 	});
 
-  extend(ComposerBody.prototype, 'onremove', function () {
-    clearInterval(this.composerPreviewInterval)
-  })
+	extend(ComposerBody.prototype, "onremove", function () {
+		clearInterval(this.composerPreviewInterval);
+	});
 });
